@@ -1,0 +1,53 @@
+.headerContainer {
+  background-color: var(--color-header-background);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  padding: 0 100px;
+  gap: 100px;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+    height: 70px;
+}
+
+.name {
+    color: white;
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  
+}
+
+.menuItem {
+  color: var(--color-header-text);
+  text-decoration: none;
+  font-size: 26px;
+}
+
+.cvButton {
+  background: var(--color-header-button);
+  color: var(--color-header-text);
+  border-radius: 5px;
+  font-size: 26px;
+  width: 100px;
+  height: 50px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

@@ -1,0 +1,9 @@
+:root {
+  --color-background: #ffffff;
+  --color-text: #111111;
+  --color-primary: #2563eb;
+  --color-header-background: #000000;
+  --color-header-text: #ffffff;
+  --color-header-button: linear-gradient(to right, #2563eb, #1e40af);
+
+}

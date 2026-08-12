@@ -1,8 +1,18 @@
+
+/* Reset default browser styles and use consistent box sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: black;
+    background-color: rgb(143, 143, 143);
 }
 
 .welcome {
     color: white;
     font-size: 42px;
+    display: flex;
+    justify-content: center;
 }

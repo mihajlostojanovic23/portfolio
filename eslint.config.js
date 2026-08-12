@@ -18,5 +18,13 @@ export default defineConfig([
     languageOptions: {
       globals: globals.browser,
     },
+   rules: {
+ 'max-len': [
+  'warn',
+  {
+    code: 200,
+  },
+]
+}
   },
 ])

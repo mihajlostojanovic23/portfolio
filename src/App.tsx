@@ -1,9 +1,10 @@
+import Header from "./layouts/Header/Header"
 
 function App() {
 
   return (
     <>
-     <p className="welcome">Welcome</p>
+     <Header />
     </>
   )
 }
