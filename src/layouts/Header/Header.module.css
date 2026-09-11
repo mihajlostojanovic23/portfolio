@@ -1,6 +1,10 @@
 .headerContainer {
-  background-color: var(--color-header-background);
+  background: var(--color-header-background);
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 10;
   height: 100px;
   display: flex;
   padding: 0 100px;

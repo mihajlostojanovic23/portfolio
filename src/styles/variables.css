@@ -2,7 +2,11 @@
   --color-background:#0B1120;
   --color-text: #111111;
   --color-primary: #2563eb;
-  --color-header-background: #0F172A;
+ --color-header-background: linear-gradient(
+  to bottom,
+  #0B1120,
+  #17255400
+);
   --color-header-text: #ffffff;
   --color-header-button: #2563EB;
   --color-header-button-hover: #0F172A;
