@@ -1,11 +1,14 @@
 :root {
-  --color-background: #ffffff;
+  --color-background:#0B1120;
   --color-text: #111111;
   --color-primary: #2563eb;
-  --color-header-background: #000000;
+  --color-header-background: #0F172A;
   --color-header-text: #ffffff;
-  --color-header-button: rgba(13, 29, 95, 0.418);
-  --color-header-button-hover: rgba(28, 63, 203, 0.418);
-  --color-header-button-border: rgba(0, 0, 0, 0.418);
+  --color-header-button: #2563EB;
+  --color-header-button-hover: #0F172A;
+  --color-header-button-border: #3B82F6;
+  --color-header-button-border-hover: #60A5FA;
+  --color-header-menu-item-underline: #ffffff;
+
 
 }

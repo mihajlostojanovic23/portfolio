@@ -36,6 +36,24 @@
   color: var(--color-header-text);
   text-decoration: none;
   font-size: 16px;
+  position: relative;
+}
+
+.menuItem::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-header-menu-item-underline);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.menuItem:hover::after {
+  transform: scaleX(1);
 }
 
 .cvButton {
@@ -50,11 +68,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease;
+  transition:  0.3s ease;
 }
 
  .cvButton:hover{
   background: var(--color-header-button-hover);
+  color: var(--color-header-text);
+  border-color: var(--color-header-button-border-hover);
 
 }
 

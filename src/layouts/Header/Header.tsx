@@ -20,7 +20,7 @@ const Header = () => {
         
       ))}
     </nav>
-    <a className={styles.cvButton} href="/documents/Mihajlo-Stojanovic.pdf" download='Mihajlo-Stojanovic.pdf' target="_blank" > Download CV </a>
+    <a className={styles.cvButton} href="/documents/Mihajlo-Stojanovic.pdf" download='Mihajlo-Stojanovic.pdf' > Download CV </a>
     </header>
   ) 
 }
