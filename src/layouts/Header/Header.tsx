@@ -8,7 +8,7 @@ const Header = () => {
     <header className={styles.headerContainer}>
       <div className={styles.brand}>
       <img src={logoDark} className={styles.logo} alt="Logo Image" />
-      <span className={styles.name}>Mihajlo Stojanovic</span>
+      <span className={styles.name}>Mihajlo Stojanović</span>
     </div>
     <nav className={styles.menu}>
       {menuItems.map((item, index) => (
@@ -20,7 +20,7 @@ const Header = () => {
         
       ))}
     </nav>
-    <a className={styles.cvButton} href="/documents/Mihajlo-Stojanovic.pdf" download='Mihajlo-Stojanovic.pdf' target="_blank" > CV </a>
+    <a className={styles.cvButton} href="/documents/Mihajlo-Stojanovic.pdf" download='Mihajlo-Stojanovic.pdf' target="_blank" > Download CV </a>
     </header>
   ) 
 }
