@@ -1,15 +1,38 @@
 .hero {
   position: relative;
+  width: 100%;
   height: 600px;
   overflow: hidden;
 }
 
-.heroImage {
+/* IMAGE + VIDEO */
+
+.heroImage,
+.heroVideo {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
+.heroImage {
+  z-index: 1;
+}
+
+.heroVideo {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.heroVideoEnded {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* HERO CONTENT */
 
 .heroContent {
   position: absolute;
@@ -17,38 +40,42 @@
   left: 100px;
   transform: translateY(-50%);
   max-width: 620px;
-  z-index: 2;
+  z-index: 4;
   color: white;
 }
 
 .heroContent h1 {
   margin: 0;
-
   font-size: 56px;
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -2px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .heroContent h1 span {
-  color: #3B82F6;
+  color: #3b82f6;
 }
 
 .eyebrow {
   margin-bottom: 16px;
-  color: #60A5FA;
+  color: #60a5fa;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 2px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
 }
 
 .description {
   margin-top: 24px;
   max-width: 540px;
-  color: #CBD5E1;
+  color: #cbd5e1;
   font-size: 18px;
   line-height: 1.6;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
 }
+
+/* BUTTON */
 
 .heroButton {
   display: inline-flex;
@@ -56,35 +83,36 @@
   justify-content: center;
   margin-top: 28px;
   padding: 14px 28px;
-  background: #2563EB;
+  background-color: #2563eb;
   border-radius: 25px;
   color: white;
   text-decoration: none;
   font-weight: 600;
 
-  transition: background-color 0.25s ease;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .heroButton:hover {
-  background: #1D4ED8;
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
 }
+
+/* BOTTOM FADE */
 
 .hero::after {
-  content: '';
+  content: "";
   position: absolute;
-  inset: 0;
-
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px;
   background: linear-gradient(
-    to right,
-    rgba(11, 17, 32, 0.95) 0%,
-    rgba(11, 17, 32, 0.75) 35%,
-    rgba(11, 17, 32, 0.15) 70%,
-    transparent 100%
+    to bottom,
+    transparent,
+    var(--color-background)
   );
-
-  z-index: 1;
-}
-
-.heroContent {
-  z-index: 2;
+  z-index: 3;
+  pointer-events: none;
 }

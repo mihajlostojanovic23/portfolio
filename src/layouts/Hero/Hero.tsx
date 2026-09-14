@@ -1,35 +1,52 @@
-import heroImage from "@/assets/images/heroImage.png"
-import styles from './Hero.module.css'
+import { useState } from "react";
+
+import heroInfo from '@/layouts/Hero/hero.constants';
+import heroImage from "@/assets/images/heroImage.png";
+import videoIntro from "@/assets/videos/intro.mp4";
+
+import styles from "./Hero.module.css";
 
 const Hero = () => {
+  const [videoEnded, setVideoEnded] = useState(false);
+
   return (
     <section className={styles.hero}>
-  <img
-    className={styles.heroImage}
-    src={heroImage}
-    alt="Smart TV streaming interface"
-  />
+      <img
+        className={styles.heroImage}
+        src={heroImage}
+        alt="Smart TV streaming application"
+      />
 
-  <div className={styles.heroContent}>
-    <p className={styles.eyebrow}>SMART TV / OTT DEVELOPER</p>
+      <video
+        className={`${styles.heroVideo} ${
+          videoEnded ? styles.heroVideoEnded : ""
+        }`}
+        src={videoIntro}
+        autoPlay
+        muted
+        playsInline
+        onEnded={() => setVideoEnded(true)}
+      />
 
-    <h1>
-      Building modern streaming
-      <span> experiences.</span>
-    </h1>
+      <div className={styles.heroContent}>
+        <p className={styles.eyebrow}>
+          {heroInfo.category}
+        </p>
 
-    <p className={styles.description}>
-      I’m a Frontend / OTT Developer specialized in building modern, high-performance Smart TV applications and streaming experiences. I focus on creating fast, reliable and intuitive products across Samsung, LG, Hisense and Philips platforms.
-    </p>
+        <h1>
+          {heroInfo.title}
+        </h1>
 
-    <a href="#projects" className={styles.heroButton}>
-      View Projects
-    </a>
-  </div>
-</section>
-  )
-}
+        <p className={styles.description}>
+          {heroInfo.description}
+        </p>
 
+        <a href="#projects" className={styles.heroButton}>
+          {heroInfo.buttonText}
+        </a>
+      </div>
+    </section>
+  );
+};
 
-
-export default Hero
+export default Hero;
