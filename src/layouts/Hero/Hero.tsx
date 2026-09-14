@@ -44,6 +44,13 @@ const Hero = () => {
         <a href="#projects" className={styles.heroButton}>
           {heroInfo.buttonText}
         </a>
+      <div className={styles.experiences}>
+  {heroInfo.experiences.map((experience) => (
+    <span key={experience} className={styles.experience}>
+      {experience}
+    </span>
+  ))}
+</div>
       </div>
     </section>
   );

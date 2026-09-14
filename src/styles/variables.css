@@ -1,6 +1,7 @@
 :root {
   --color-background:#0B1120;
   --color-text: #111111;
+  --color-secondary-text: #b0aeae;
   --color-primary: #2563eb;
  --color-header-background: linear-gradient(
   to bottom,
