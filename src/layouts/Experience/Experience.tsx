@@ -1,12 +1,9 @@
-import ExperienceCard from "@/components/ExperienceCard/ExperienceCard";
 import style from "./Experience.module.css"
-import experiencesList from "./experience.contants";
+import {  SwiperComponent } from "@/components/Swiper/Swiper";
 
 const Experience = () => {
   return <div className={style.experience}>
-    {experiencesList.map((experience, index) => (
-      <ExperienceCard key={index} {...experience} />
-    ))}
+   <SwiperComponent />
      </div>;
 };
 
