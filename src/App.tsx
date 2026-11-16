@@ -1,6 +1,6 @@
-import Experience from "./layouts/Experience/Experience"
 import Header from "./layouts/Header/Header"
 import Hero from "./layouts/Hero/Hero"
+import Skills from "./layouts/Skills/Skills"
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
     <>
      <Header />
      <Hero />
-     <Experience />
+     <Skills />
     </>
   )
 }

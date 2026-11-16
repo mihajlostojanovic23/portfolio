@@ -1,3 +1,20 @@
-.swiperContainer{
-    width: 900px;
+.swiperWrapper {
+  position: relative;
+  --swiper-navigation-color: #fff;
+  --swiper-navigation-sides-offset: calc(
+    var(--page-margin) / 2 - var(--swiper-navigation-size) / 2
+  );
+}
+
+.swiperContainer {
+  width: calc(100% - 2 * var(--page-margin));
+  margin: 0 var(--page-margin);
+  box-sizing: border-box;
+}
+
+.swiperWrapper :global(.swiper-button-prev),
+.swiperWrapper :global(.swiper-button-next) {
+  background: none;
+  border: 0;
+  padding: 0;
 }
